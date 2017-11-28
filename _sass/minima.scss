@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: times, serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #181918 !default;
+$background-color: #fbf8f4 !default;
+$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout"
+;
+ a:link, a:visited {
+   color: $text-color;
+ }
+
+ *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+.page-content {
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.logo {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 36vw;
+  max-width: 75rem;
+
+  @include media-query($on-palm) {
+    width: 80vw;
+    left: 50%;
+    margin-left: -40vw;
+    top: 42vw;
+  }
+}
+
+.info {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+
+  .top {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+
+    .artist-info {
+      margin-top: 2rem;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 2rem;
+  }  
+}
+
+.sponsor {
+  padding: 1rem;
+}
+.sponsor-logo {
+  max-width: 10rem;
+  max-height: 10rem;
+  margin-bottom: 1rem;
+
+  img {
+
+    mix-blend-mode: overlay;
+  }
+  
+}
