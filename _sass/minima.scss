@@ -86,6 +86,7 @@ $on-laptop:        800px !default;
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
+    padding: 2rem;
 
     .artist-info {
       margin-top: 2rem;
@@ -97,13 +98,23 @@ $on-laptop:        800px !default;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-top: 2rem;
+    padding-top: 6rem;
   }  
 }
 
 .management {
   padding: 1rem;
+  &:last-child {
+    margin-left: 4rem;
+  }
+
+  @include media-query($on-palm) {
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
+
 .management-logo {
   display: flex;
   flex-flow: column wrap;
