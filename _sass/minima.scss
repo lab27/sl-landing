@@ -105,13 +105,16 @@ $on-laptop:        800px !default;
   padding: 1rem;
 }
 .sponsor-logo {
+  display: flex;
+  flex-flow: column wrap;
+  background: $background-color;
   max-width: 10rem;
   max-height: 10rem;
   margin-bottom: 1rem;
 
   img {
     width: 100%;
-    mix-blend-mode: overlay;
+    mix-blend-mode: multiply;
   }
   
 }
