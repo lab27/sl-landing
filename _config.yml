@@ -17,8 +17,8 @@ title: Sonja Leutwyler
 email: sl@sonjaleutwyler.com
 description: >- # this means to ignore newlines until "baseurl:"
   Sonja Leutwyler (Mezzosopranistin) wurde in Zürich geboren. Sie studierte Viola und Gesang an der Zürcher Hochschule der Künste und an der Hochschule für Musik und Theater in München u.a bei Maria Cavazza, Christian Gerhaher und Helmut Deutsch. Noch während des Studiums sang sie bereits grössere Rollen am Prinzregententheater München.
-baseurl: "/sl-landing" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://sonjaleutwyler.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings
